@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Agregar Producto</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+  <header class="flex">
+    <span class="arrow-right">></span>
+    <span class="text-blue-600">My Online Store</span>
+    <span class="arrow-right">></span>
+    <span class="text-gray-600">Agregar Producto</span>
+  </header>
+  <section id="product-detail">
+    <form action="javascript:void(0)">
+      <div class="flex p-4">
+        <div class="flex-1 p-4">
+          <img id="product-image" src="images/image-icon.jpg" class="cursor-pointer">
+          <input id="input-image" name="imagen" type="file" class="hidden">
+        </div>
+        <div class="flex-1 p-4 flex flex-col">
+          <input id="input-name" name="nombre" placeholder="Nombre">
+          <input id="input-description" name="descripcion" placeholder="Descripcion">
+          <label for="input-category">Categoria</label>
+          <select id="input-category" name="select">
+            <option value="teclados">Teclados</option>
+            <option value="monitores">Monitores</option>
+            <option value="mouse">Mouse</option>
+          </select>
+          <div class="flex flex-row">
+            <input id="input-price" name="precio" placeholder="Precio">
+            <input id="input-quantity" name="cantidad" placeholder="Cantidad">
+            <label for="input-is-public">¿Publico?</label>
+            <input id="input-is-public" type="checkbox" name="es-publico">
+          </div>
+        </div>
+      </div>
+      <!--input type="submit" value="GUARDAR" class="bg-sky-600 hover:bg-sky-700 text-white p-4 rounded-full block w-full cursor-pointer font-bold"-->
+      <button id="add-button" class="bg-sky-600 hover:bg-sky-700 text-white p-4 rounded-full block w-full cursor-pointer font-bold">
+        GUARDAR
+      <button>
+    </form>
+  </section>
+  <script src="js/api.js"></script>
+  <script src="js/add-product.js"></script>
+</body>
+</html>

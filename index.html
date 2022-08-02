@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Product List</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+  <header>
+    <div id="title-bar" class="flex">
+      <span class="arrow-right">></span>
+      <span class="text-gray-600 flex-1">My Online Store</span>
+      <a href="add-product.html">Agregar Producto</a>
+    </div>
+    <div id="filter-bar" class="flex justify-center gap-4">
+      <label for="input-is-public">Disponible al publico</label>
+      <input id="input-is-public" type="checkbox">
+      <label for="input-category">Categoria</label>
+      <select id="input-category" name="select">
+        <option selected>Todos</option>
+        <option value="teclados">Teclados</option>
+        <option value="monitores">Monitores</option>
+        <option value="mouse">Mouse</option>
+      </select>
+    </div>
+  </header>
+  <section id="product-list" class="flex flex-wrap"></section>
+  <script src="js/api.js"></script>
+  <script src="js/index.js"></script>
+</body>
+</html>

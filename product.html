@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Product Details</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+  <header class="flex">
+    <span class="arrow-right">></span>
+    <span class="text-blue-600">My Online Store</span>
+    <span class="arrow-right">></span>
+    <span class="text-gray-600">Nombre de producto</span>
+  </header>
+  <section id="product-detail" class="flex p-4">
+    <div class="flex-1 p-4">
+      <img id="product-image">
+    </div>
+    <div class="flex-1 p-4">
+      <span class="block text-2xl">Producto</span>
+      <span class="text-base">descripcion</span>
+      <div>
+        <span>Precio: <span id="price">$450</span></span>
+        <span>Quedan <span id="product-number">8</span> productos</span>
+      </div>
+    </div>
+  </section>
+  <script src="js/index.js"></script>
+  <script src="js/product-detail.js"></script>
+</body>
+</html>
