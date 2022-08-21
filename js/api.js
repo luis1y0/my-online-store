@@ -3,8 +3,7 @@
 // version de la API y mantener compatibilidad con versiones
 // anteriores
 let apiVersion = 1;
-let host = 'http://localhost:8000';
-let resource = 'productos';
+let url = 'http://localhost:8080/api/v1/productos';
 
 async function fetchProducts(isVisible, category) {
   let options = {
@@ -14,8 +13,8 @@ async function fetchProducts(isVisible, category) {
   };
   let urlEncodedIsVisible = encodeURIComponent(isVisible);
   let urlEncodedCategory = encodeURIComponent(category);
-  let url = `${host}/api/v${apiVersion}/${resource}?publico=${urlEncodedIsVisible}&categoria=${urlEncodedCategory}`;
-  let response = await fetch(url, options);
+  let urlStr = `${url}?publico=${urlEncodedIsVisible}&categoria=${urlEncodedCategory}`;
+  let response = await fetch(urlStr, options);
   let json = await response.json();
   return json;
 }
@@ -28,7 +27,6 @@ async function addProduct(product) {
     },
     body: JSON.stringify(product)
   };
-  let url = `${host}/api/v${apiVersion}/${resource}`;
   let response = await fetch(url, options);
   let json = await response.json();
   return json;
